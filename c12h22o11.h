@@ -8,7 +8,7 @@ namespace c12h22o11
     struct brown_sugar_t
     {
         white_sugar_t operator-(molasses_t);
-    
+        molasses_t operator-(white_sugar_t);
     };
     brown_sugar_t brown_sugar;
 
@@ -26,6 +26,11 @@ namespace c12h22o11
     white_sugar_t brown_sugar_t::operator-(molasses_t)
     {
         return white_sugar;
+    }
+
+    molasses_t brown_sugar_t::operator-(white_sugar_t)
+    {
+        return molasses;
     }
 
     brown_sugar_t white_sugar_t::operator+(molasses_t)
